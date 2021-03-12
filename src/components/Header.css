@@ -1,0 +1,7 @@
+.header {
+  display: flex;
+  justify-content: center;
+  color: red;
+  margin-top: 32px;
+  font-size: 32px;
+}
