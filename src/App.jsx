@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header';
@@ -11,8 +11,10 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Header />
-        <Route exact path='/' component={CoinListPage} />
-        <Route path='/coin/:id' component={CoinDetailPage} />
+        <Routes>
+          <Route exact path='/' element={<CoinListPage />} />
+          <Route path='/coin/:id' element={<CoinDetailPage />} />
+        </Routes>
       </BrowserRouter>
     </div>
     
