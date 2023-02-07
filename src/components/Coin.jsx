@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import './Coin.css';
 
 const Coin = ({ id, name, image, symbol, volume, price, price_change_percentage_24h, marketcap }) => {
-  // console.log('NAME: ', name);
   return (
     <Link 
       className='coin-container' 
