@@ -8,13 +8,13 @@ import CoinDetailPage from './pages/CoinDetailPage';
 
 const App = () => {
   return (
-    <div>
+    <Route>
       <BrowserRouter>
         <Header />
         <Route exact path='/' component={CoinListPage} />
         <Route path='/coin/:id' component={CoinDetailPage} />
       </BrowserRouter>
-    </div>
+    </Route>
     
   )
 }
