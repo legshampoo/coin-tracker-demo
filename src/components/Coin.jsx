@@ -8,17 +8,19 @@ import { Link } from 'react-router-dom';
 import './Coin.css';
 
 const Coin = ({ id, name, image, symbol, volume, price, price_change_percentage_24h, marketcap }) => {
-  
+  // console.log('NAME: ', name);
   return (
-    <Link className='coin-container' 
+    <Link 
+      className='coin-container' 
       to={{
         pathname: `/coin/${id}`,
-        query: {
-          name: `${name}`,
-          image: `${image}`,
-          price: `${price}`  
-        }
-      }}>
+      }}
+      state= {{
+        name: `${name}`,
+        image: `${image}`,
+        price: `${price}`  
+      }}
+      >
       <div className='coin-row'>
         <div className='coin'>
           <img src={image} alt='coin'/>
